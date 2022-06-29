@@ -1,0 +1,24 @@
+---
+- students:
+  - name: anil
+    phno: 
+      home: 29044
+      personal: 4958574
+    address:
+        D.no: 4-2
+        street: dfggg
+        pincode: 500027
+
+  - name: suni
+    phno: 748494
+    address:
+       D.no: 6-9
+       street: rhdjsl
+       pincode: 300009
+
+  - name: venil
+    phno: 505953
+    address:
+       D.no: 3-9
+       street: djdjhfk
+       pincode: 404948
