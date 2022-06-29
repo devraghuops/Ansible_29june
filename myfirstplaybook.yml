@@ -11,3 +11,9 @@
     apt:
      name: tree
      state: absent
+
+
+  - name: iwant to install wget
+    apt:
+     name: wget
+     state: present   
