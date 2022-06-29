@@ -5,13 +5,12 @@
   - name: i want to install web server
     apt:
      name: apache2
-     state: absent
+     state: present
 
   - name: i want to install tree
     apt:
      name: tree
-     state: absent
-
+     state: present
 
   - name: iwant to install wget
     apt:
