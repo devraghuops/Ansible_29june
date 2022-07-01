@@ -24,6 +24,6 @@
   - name: i want restart my httpd server
     service:
        name: httpd
-       state: restart
+       state: restarted
     when: ansible_os_family=="RedHat"   
        
