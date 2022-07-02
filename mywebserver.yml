@@ -6,24 +6,24 @@
 
   - name: i want install webserver on ubuntu Nodes
     apt:
-     name: apache2
+     name: "{{mywebpackonubuntu}}"
      state: present 
     when:  ansible_os_family=="Debian"
 
   - name: i want to restarted ubuntu nodes
     service:
-        name: apache2
+        name: "{{mywebpackonubuntu}}"
         state: restarted   
     when: ansible_os_family=="Debian"  
 
   - name: i want to install webserver on redhat nodes
     yum:
-      name: httpd
+      name: "{{mywebpackonredhat}}"
       state: present
     when: ansible_os_family=="RedHat"    
   - name: i want restart my httpd server
     service:
-       name: httpd
+       name: "{{mywebpackonredhat}}"
        state: restarted
     when: ansible_os_family=="RedHat"   
        
