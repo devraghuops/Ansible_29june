@@ -18,10 +18,16 @@
     template: 
        src: myindex.j2
        dest: /var/www/html/index.html   
-
+    notify: restart_webserver
 
   - name: download file from intenet
     get_url:
        url: https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
        dest: /home/ubuntu
-       force_basic_auth: yes     
+       force_basic_auth: yes 
+   
+  handlers:
+  - name:  restart_webserver   
+    service:
+       name: apache2
+       state: restarted    
